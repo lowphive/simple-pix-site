@@ -1,0 +1,5 @@
+This site created as a test page following the guide at
+http://railsgirls-my.github.io/app/
+It can be run with the command
+$bin/rails server
+from the root level directory.

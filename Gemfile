@@ -45,5 +45,9 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # following deployment guide found at
+  # https://www.sitepoint.com/deploying-your-rails-app-to-the-cloud-with-unicorn-nginx-and-capistrano/
+  gem 'capistrano'
 end
 

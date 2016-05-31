@@ -29,25 +29,33 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
+  # following deployment guide found at
+  # https://www.sitepoint.com/deploying-your-rails-app-to-the-cloud-with-unicorn-nginx-and-capistrano/
+gem 'capistrano'
+  
+  # Issue with running cap deploy:setup, trying out suggest from 
+  # https://www.sitepoint.com/deploying-your-rails-app-to-the-cloud-with-unicorn-nginx-and-capistrano/
+gem 'capistrano-bundler'
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'capistrano-rails', group: :development
 
 group :development, :test do
+
+  # if we are using RBENV
+#gem 'capistrano-rbenv', "-> 2.0"
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+gem 'byebug'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+gem 'spring'
 
-  # following deployment guide found at
-  # https://www.sitepoint.com/deploying-your-rails-app-to-the-cloud-with-unicorn-nginx-and-capistrano/
-  gem 'capistrano'
 end
 
